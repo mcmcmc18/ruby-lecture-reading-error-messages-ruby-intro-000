@@ -4,7 +4,7 @@ describe "Not having any errors and being all green" do
     it 'raises a NameError when encountering undefined barewords'
       expect{
         load './lib/a_name_error.rb'
-      }.to_not raise_error do
+      }.to raise_error(NameError)
     end
   end
 
